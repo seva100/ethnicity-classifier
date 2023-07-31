@@ -5,7 +5,7 @@ ResNet-18-based classifier of face ethnicity into 4 classes (African, East Asian
 -----
 Artem Sevastopolsky, Yury Malkov, Nikita Durasov, Luisa Verdoliva, Matthias Nie√üner. <i>How to Boost Face Recognition with StyleGAN?</i> // International Conference on Computer Vision (ICCV), 2023
 
-### <img align=center src=./docs/project.png width='32'/> [Project page](https://seva100.github.io/stylegan-for-facerec) &ensp; <img align=center src=./docs/paper.png width='24'/> [Paper](https://arxiv.org/abs/2210.10090) &ensp; <img align=center src=./docs/video.png width='24'> [Video](https://www.youtube.com/watch?v=Bsi0RMTdEaI) &ensp;
+### <img align=center src=./docs/project.png width='32'/> [Project page](https://seva100.github.io/stylegan-for-facerec) &ensp; <img align=center src=./docs/paper.png width='24'/> [Paper](https://arxiv.org/abs/2210.10090) &ensp; <img align=center src=./docs/video.png width='24'> [Video](https://www.youtube.com/watch?v=Bsi0RMTdEaI) &ensp; <img align=center src=./docs/code.png width='24'> [Code](https://github.com/seva100/stylegan-for-facerec) 
 
 -----
 <img src=./docs/Demonstration.png width=1200>
@@ -13,7 +13,7 @@ Artem Sevastopolsky, Yury Malkov, Nikita Durasov, Luisa Verdoliva, Matthias Nie√
 The model was trained in 2 stages:
 
 1. Training ResNet-18 (from ImageNet checkpoint) on images from [BUPT-BalancedFace](http://www.whdeng.cn/RFW/Trainingdataste.html) and corresponding ethnicity labels. We noticed that after this stage, the model performs reasonably well but still makes consistent mistakes.
-2. Inferring the model on [WebFace-42M]()https://www.face-benchmark.org/ dataset (containing many images of the same people) and applying consensus procedure: considering an identity of ethnicity X, if and only if for >= 80\% of this identity's images, the classifier predicted the race X (not more than 20 random images per identity considered). Training a new classifier on the subset of selected ethnicities WebFace-42M and corresponding labels. 
+2. Inferring the model on [WebFace-42M](https://www.face-benchmark.org/) dataset (containing many images of the same people) and applying consensus procedure: considering an identity of ethnicity X, if and only if for >= 80\% of this identity's images, the classifier predicted the race X (not more than 20 random images per identity considered). Training a new classifier on the subset of selected ethnicities WebFace-42M and corresponding labels. 
 
 The identities list can be found in the data released for the paper and is accessible by filling in the [form]() (see [stylegan-for-facerec](https://github.com/seva100/stylegan-for-facerec) for more details).
 
